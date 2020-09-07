@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:star_recepies/screens/categories_screen.dart';
 import 'package:star_recepies/screens/favorite_screen.dart';
+import 'package:star_recepies/widgets/main_drawer.dart';
 
 class TabsScreen extends StatefulWidget {
   @override
@@ -13,7 +14,9 @@ class _TabsScreenState extends State<TabsScreen> {
     return DefaultTabController(
       length: 2,
       child: Scaffold(
+        drawer: MainDrawer(),
         appBar: AppBar(
+
           title: Text('Meal'),
           bottom: TabBar(
             tabs: [
