@@ -1,9 +1,12 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:star_recepies/category_item.dart';
-import 'package:star_recepies/dummy_data.dart';
+import 'file:///C:/Users/onlyt/AndroidStudioProjects/star_recepies/lib/widgets/category_item.dart';
+import 'file:///C:/Users/onlyt/AndroidStudioProjects/star_recepies/lib/data/dummy_data.dart';
 
 class CategoriesScreen extends StatelessWidget {
+
+
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
