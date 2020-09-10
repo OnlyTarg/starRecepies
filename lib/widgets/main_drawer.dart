@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:star_recepies/screens/filters_screen.dart';
+import 'package:star_recepies/screens/tabs_screen.dart';
 
 class MainDrawer extends StatelessWidget {
-  Widget buildListTile(String title, IconData icon){
+  Widget buildListTile(String title, IconData icon, Function tabHandler){
     return ListTile(leading: Icon(icon, size: 26,),
       title: Text(title, style: TextStyle(fontFamily: 'Roboro',
           fontSize: 24,
           fontWeight: FontWeight.bold),),
-      onTap: (){
-
-      },);
+      onTap:  tabHandler );
   }
   @override
   Widget build(BuildContext context) {
@@ -34,8 +34,8 @@ class MainDrawer extends StatelessWidget {
             ),
           ),
           SizedBox(height: 20,),
-          buildListTile('Meals', Icons.restaurant),
-          buildListTile('Filter', Icons.settings),
+          buildListTile('Meals', Icons.restaurant, (){Navigator.of(context).pushReplacementNamed('/');}),
+          buildListTile('Filter', Icons.settings, (){Navigator.of(context).pushReplacementNamed(FiltersScreen.routName);}),
         ],
       ),
     );
